@@ -31,7 +31,7 @@ def index():
 def get_heroes():
     heroes = Hero.query.all()
     return jsonify([hero.to_dict() for hero in heroes]), 200
-
+# make sure you seed the informatin to the databese before trying these steps
 # Route to fetch a hero by ID
 @app.route('/heroes/<int:id>', methods=['GET'])
 def get_hero(id):
